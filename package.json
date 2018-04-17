@@ -16,7 +16,9 @@
     "start:prod:server": "cd server && yarn start",
     "start:client": "cd client && yarn start",
     "start:dev:server": "cd server && yarn dev",
-    "start:dev:server:win32": "cd server&&yarn dev:win32"
+    "start:dev:server:win32": "cd server&&yarn dev:win32",
+    "test:cypress": "cypress open",
+    "test:cypress-headless": "cypress run"
   },
   "engines": {
     "node": "^9.6.0",
@@ -41,5 +43,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,json,css}": ["prettier --write", "git add"]
+  },
+  "dependencies": {
+    "cypress": "^2.1.0"
   }
 }
