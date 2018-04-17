@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "NODE_ENV=local nodemon server.js",
+    "dev:win32": "set NODE_ENV=local&&nodemon server.js",
     "test": "NODE_ENV=test jest",
+    "test:win32": "set NODE_ENV=test jest",
     "test:watch": "yarn test --watch",
     "test:coverage": "yarn test --coverage"
   },
@@ -17,7 +19,7 @@
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
-    "dotenv": "^4.0.0",
+    "dotenv": "^5.0.1",
     "errorhandler": "^1.5.0",
     "express": "^4.16.2",
     "express-async-wrap": "^1.0.0",
