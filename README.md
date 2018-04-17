@@ -1,5 +1,23 @@
 # README
 
+
+## Lab Exercise
+
+Run the following commands
+
+```shell
+git clone https://github.com/joozybrain/cypress-lunchandlearn
+yarn install
+yarn start
+```
+For Windows
+
+```shell
+git clone https://github.com/joozybrain/cypress-lunchandlearn
+yarn install:win32
+yarn start:win32
+```
+
 ## How to install and use Cypress
 
 Run the following commands
@@ -18,23 +36,44 @@ yarn add cypress
 ```
 yarn test:cypress
 ```
-## Lab Exercise
+### Create a Cypress test for a user story
+Acceptance Criteria:
+Given I want to sign up for an account
+When I click to sign up
+Then I should be asked to provide an email address
+And password
+And confirm my password
 
-Run the following commands
+Given The password and confirm password do not match
+Then I should be informed that the passwords don't match
 
-```shell
-git clone https://github.com/joozybrain/cypress-lunchandlearn
-yarn install
-yarn start
-```
-For Windows
+Given I have provided a valid email address and valid password
+And The password matches with confirm password
+When I click to create account
+Then I should get a confirmation that my account was created successfully
 
-```shell
-git clone https://github.com/joozybrain/cypress-lunchandlearn
-yarn install:win32
-yarn start:win32
-```
+Given I enter an email that is already in use
+When I click to create account
+Then I should be informed that:
+- "The email address you have entered is already associated with another account."
+
+
 ## Useful APIs
+
+#### cy.visit(http://localhost:300);
+- Indicate which web page you want to start your cypress test
+#### .click()
+- Simulate mouse click
+#### .type()
+- Simulate keyboard typing
+#### .should() and .contains()
+- Assertion tests to make sure your actual results and expected results are the same.
+```
+cy.get("#user-name").contains("Bob");
+
+cy.get(".alert-danger").contains(/^(?!\s*$).+/);
+```
+
 
 
 
