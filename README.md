@@ -39,16 +39,18 @@ yarn test:cypress
 ### Create a Cypress test for a user story
 
 ### Acceptance Criteria:
-- Given I want to sign up for an account
+Given I want to sign up for an account
 - When I click to sign up
 - Then I should be asked to provide an email address
 - And password
 
-- Given I have provided a valid email address and valid password
+
+Given I have provided a valid email address and valid password
 - When I click to create account
 - Then I should get a confirmation that my account was created successfully
 
-- Given I enter an email that is already in use
+
+Given I enter an email that is already in use
 - When I click to create account
 - Then I should be informed that:
 - "The email address you have entered is already associated with another account."
