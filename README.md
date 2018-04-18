@@ -37,7 +37,8 @@ yarn add cypress
 yarn test:cypress
 ```
 ### Create a Cypress test for a user story
-Acceptance Criteria:
+
+### Acceptance Criteria:
 Given I want to sign up for an account
 When I click to sign up
 Then I should be asked to provide an email address
