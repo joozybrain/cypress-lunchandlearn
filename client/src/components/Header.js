@@ -69,7 +69,7 @@ class Header extends React.Component {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/signup" activeStyle={active}>
+          <NavLink to="/signup" activeStyle={active} id="sign-up">
             Sign up
           </NavLink>
         </li>

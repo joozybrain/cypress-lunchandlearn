@@ -43,13 +43,8 @@ Given I want to sign up for an account
 When I click to sign up
 Then I should be asked to provide an email address
 And password
-And confirm my password
-
-Given The password and confirm password do not match
-Then I should be informed that the passwords don't match
 
 Given I have provided a valid email address and valid password
-And The password matches with confirm password
 When I click to create account
 Then I should get a confirmation that my account was created successfully
 
